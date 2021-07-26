@@ -9,11 +9,12 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/AppTheme"
-        tools:replace="android:allowBackup,icon,theme,label">
-        <activity android:name=".auth.demo.LoginActivity"></activity>
+        tools:replace="android:allowBackup,icon,theme,label"
+        android:theme="@style/AppTheme">
+        <activity android:name=".MainActivity"></activity>
+        <activity android:name=".auth.demo.LoginActivity" />
         <activity android:name=".auth.demo.RegistrationActivity" />
-        <activity android:name=".MainActivity">
+        <activity android:name=".auth.demo.StartActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

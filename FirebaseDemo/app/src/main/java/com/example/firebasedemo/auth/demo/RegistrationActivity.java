@@ -1,5 +1,6 @@
 package com.example.firebasedemo.auth.demo;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
@@ -9,6 +10,7 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.appcompat.app.AppCompatActivity;
 
+import com.example.firebasedemo.MainActivity;
 import com.example.firebasedemo.R;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -49,7 +51,8 @@ public class RegistrationActivity extends AppCompatActivity {
                 @Override
                 public void onComplete(@NonNull Task<AuthResult> task) {
                     if (task.isSuccessful()) {
-                        Toast.makeText(RegistrationActivity.this, "Done...!", Toast.LENGTH_SHORT).show();
+                        startActivity(new Intent(RegistrationActivity.this, MainActivity.class));
+                        finish();
                     } else {
                         Toast.makeText(RegistrationActivity.this, "Locha paida...!", Toast.LENGTH_SHORT).show();
                     }
